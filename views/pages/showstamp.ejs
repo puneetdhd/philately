@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me and Comments Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="ellipse-icon-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
+                <ellipse cx="17.5" cy="17" rx="17.5" ry="17" fill="#D9D9D9"/>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Community</a>
+            <a href="#">Trade</a>
+        </div>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="ellipse-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
+                <ellipse cx="17.5" cy="17" rx="17.5" ry="17" fill="#5C2C21"/>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="about-me-section">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/14/78/24/147824b19db7c76ffc9359b43529deb1.jpg" alt="Your Image" />
+        </div>
+        <div class="about-text">
+            <h3>About Me:</h3>
+            <p>
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+                Trandom this much i wasnot this is my section
+            </p>
+        </div>
+    </section>
+    
+    <!-- Trade Button -->
+    <div class="trade-button-container">
+        <button class="trade-button">Trade</button> <!-- Trade Button -->
+    </div>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <h2>Comments:</h2>
+        <div class="comments-container">
+            <div class="comment">
+                <div class="comment-ellipse"></div>
+                <div class="comment-content">
+                    <p>What the fuck !!</p>
+                    <div class="reply">
+                        <div class="reply-comment">
+                            <div class="reply-ellipse"></div>
+                            <p>What What the fuck !!</p>
+                        </div>
+                        <div class="reply-comment">
+                            <div class="reply-ellipse"></div>
+                            <p>The Fuck !!</p>
+                        </div>
+                        <div class="reply-comment">
+                            <div class="reply-ellipse"></div>
+                            <p>Okg!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-ellipse"></div>
+                <div class="comment-content">
+                    <p>I want to buy it.</p>
+                </div>
+            </div>
+        </div>
+        <div class="add-comment">
+            <input type="text" placeholder="Add a comment" />
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .ellipse-icon-left {
+        margin-right: 20px;
+    }
+
+    .nav-links {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .search-bar-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 60%;
+        max-width: 600px;
+        height: 40px;
+        border-radius: 16px;
+        background-color: #e2e1e1;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .ellipse-end {
+        margin-left: 20px;
+    }
+
+    /* About Me Section */
+    .about-me-section {
+        display: flex;
+        margin: 20px 0;
+    }
+
+    /* Left Image Container */
+    .image-container {
+        width: 50%; /* Left half */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%; /* Responsive image */
+        border-radius: 10px; /* Optional: add border radius */
+    }
+
+    /* About Text (Right Half) */
+    .about-text {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        width: 50%; /* Right half */
+        background: linear-gradient(135deg, #6f544e, #4e3d36); /* Gradient background */
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        color: white;
+    }
+
+    .about-text h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .trade-button-container {
+        display: flex;
+        justify-content: center; /* Center the button */
+        margin: 20px 0; /* Space around the button */
+    }
+
+    .trade-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5C2C21; /* Button color */
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .trade-button:hover {
+        background-color: #4A2320; /* Darker shade on hover */
+    }
+
+    /* Comments Section */
+    .comments-section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .comments-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: left;
+    }
+
+    .comments-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment, .reply-comment {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .comment-ellipse, .reply-ellipse {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        margin-right: 10px;
+    }
+
+    .comment-content {
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .reply {
+        margin-left: 40px; /* Indent replies */
+        padding-top: 10px;
+    }
+
+    .add-comment {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .add-comment input {
+        width: 100%;
+        max-width: 600px;
+        height: 40px;
+        border-radius: 16px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+</style>

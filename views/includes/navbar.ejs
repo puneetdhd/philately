@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand brand-logo" href="/"><i class="fa-solid fa-stamp"></i></a>
+            </a>
+            <h6 class="mb-0 ms-2">PhilatelyIndia: A Collector's Paradise</h6>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/explore">Community</a>
+                <!-- <a class="nav-link" href="/community">Community</a> -->
+                <a class="nav-link" href="https://www.indiapost.gov.in/Philately/Pages/Content/StampCalendar.aspx">Stamp Calendar</a>
+                <!-- <a class="nav-link" href="/trade">Trade</a> -->
+            </div>
+        </div>
+        <%if(!currUser){%>
+        <form action="/signup">
+        <button class="custom-button" >Join Our Community</button>
+        </form>
+        <%}%>
+        <%if(currUser){%>
+            <form action="/logout">
+                <button class="custom-button" >Log out</button>
+                </form>
+        <%}%>
+    </div>
+</nav>
+
+<style>.brand-logo {
+    width: 40px; /* Adjust as per your logo size */
+    height: auto;
+}
+
+.navbar h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5C2C21; /* Color matching the button */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 1.5rem;
+    color: #5C2C21;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.custom-button {
+    background-color: #5C2C21;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid #5C2C21;
+    padding: 0 32px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.custom-button:hover {
+    background-color: #4a1f18;
+}
+
+@media (max-width: 768px) {
+    .custom-button {
+        margin-top: 10px; /* Stack below the menu on small screens */
+    }
+}
+.navbar {
+    background-color: white; /* Set the background to white */
+    border-bottom:none; /* Optional: Add a light border for better distinction */
+    padding: 0.75rem 1rem; /* Add some padding for better spacing */
+}
+
+
+
+</style>

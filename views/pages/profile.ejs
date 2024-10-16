@@ -1,0 +1,158 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <section class="profile-header">
+        <div class="profile-banner">
+            <img src="banner.jpg" alt="Banner" class="img-fluid">
+        </div>
+        <div class="profile-details d-flex align-items-center">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img rounded-circle">
+            <div class="profile-info ms-3">
+                <h2>Pradip Kumar</h2>
+                <p>564 collections</p>
+            </div>
+            <div class="ms-auto">
+                <button class="btn btn-primary">Follow</button>
+                <button class="btn btn-outline-secondary">Message</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Following</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trade History</a>
+                    </li>
+                </ul>
+
+                <h4 class="mt-4">Stamp Gallery</h4>
+                <div class="gallery">
+                    <img src="stamp1.jpg" class="img-fluid" alt="Stamp">
+                    <img src="stamp2.jpg" class="img-fluid" alt="Stamp">
+                    <img src="stamp3.jpg" class="img-fluid" alt="Stamp">
+                    <img src="stamp4.jpg" class="img-fluid" alt="Stamp">
+                    <img src="stamp5.jpg" class="img-fluid" alt="Stamp">
+                    <img src="stamp6.jpg" class="img-fluid" alt="Stamp">
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <h4>Posts</h4>
+                <div class="post mb-3">
+                    <h5>Shri Ram Janmbhoomi Temple India Souvenir Sheet</h5>
+                    <div class="d-flex align-items-center">
+                        <img src="profile.jpg" alt="Profile Picture" class="profile-img-mini rounded-circle">
+                        <p class="ms-2">Pradip Kumar</p>
+                    </div>
+                    <p>The Shri Ram Janmbhoomi Temple holds immense significance for millions of Hindus worldwide as a revered site believed to be the birthplace of Lord Rama. The history of this sacred place is as diverse and profound as India's cultural tapestry, marked by centuries of devotion, controversy, and ultimately, a historic resolution.</p>
+                    <img src="post-image.jpg" alt="Post Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2024 PhilatelyIndia. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #5a3e36;
+}
+
+header .nav-link {
+    color: #5a3e36;
+}
+
+header .btn {
+    background-color: #5a3e36;
+    border: none;
+}
+
+.profile-header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.profile-banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-details {
+    margin-top: -80px;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    color: #5a3e36;
+}
+
+.profile-info p {
+    color: #6c757d;
+}
+
+.gallery img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.profile-img-mini {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+</style>

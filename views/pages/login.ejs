@@ -1,0 +1,121 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <h1 class=" col-6 offset-3">Login on PhilatelyIndia</h1>
+
+    <div class="col-8 offset-2">
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+            
+
+
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input 
+        name="username"   
+        id="username"      
+        type="text" 
+        class="form-control" 
+        required >
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input 
+                name="password"   
+                id="password"      
+                type="password" 
+                class="form-control" 
+                required >
+                <br>
+                
+                <button class="btn btn-success">Login</button>
+                <br>
+                <br>
+                Dont have an account <a href="/signup" class="button3">Sign up</a>
+            </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+<style>
+/* styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    color: #603d33; /* Brown color for the title */
+    font-size: 1.5rem; /* Larger font size for the title */
+    font-weight: bold;
+    margin: 0;
+    padding-left: 20px;
+}
+
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+main p.lead {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+button.btn {
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    background-color: #603d33; /* Custom brown color */
+    border: none;
+}
+
+button.btn:hover {
+    background-color: #4b2f25;
+}
+
+.button3{
+    color: black;
+}
+
+
+
+</style>

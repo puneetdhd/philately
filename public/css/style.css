@@ -1,0 +1,101 @@
+/* styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    color: #603d33; /* Brown color for the title */
+    font-size: 1.5rem; /* Larger font size for the title */
+    font-weight: bold;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: #000; /* Black color for navbar items */
+    font-size: 1rem; /* Smaller font size for navbar items */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #444; /* Dark gray for hover effect */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+main p.lead {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+button.btn {
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    background-color: #603d33; /* Custom brown color */
+    border: none;
+}
+
+button.btn:hover {
+    background-color: #4b2f25;
+}
+
+.footer {
+    background-color: #603d33;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-login img {
+    width: 30px;
+    height: auto;
+}
+
+.social-login a {
+    margin: 0 1115px; /* Adds more space between the icons */
+}
+
+.social-login i {
+    font-size: 2rem; /* Increases the size of the icons */
+}

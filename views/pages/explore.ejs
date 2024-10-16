@@ -1,0 +1,174 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    
+    <!-- <header class="d-flex justify-content-between align-items-center p-3">
+        <h1>PhilatelyIndia: A Collector's Paradise</h1>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+
+    <!-- Banner Section -->
+    <section class="banner-container">
+        <div class="banner d-flex justify-content-between align-items-center p-4">
+            <img src="https://as1.ftcdn.net/v2/jpg/02/10/69/74/1000_F_210697480_iZbQ8xCT5cW76hzjTCEcR5YozrwoImVr.jpg" alt="Rare Stamp" class="img-fluid banner-img">
+            <div class="banner-text">
+                <h2>Discover Rare Stamps</h2>
+                <p>Explore the world of rare stamps that carry history, art, and stories from around the world.</p>
+                <form action="/rarestamp">
+                <button class="btn btn-dark" >More Info</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories text-center mt-5">
+        <div class="d-flex justify-content-around">
+            <button class="btn btn-lg btn-category">Trending</button>
+            <button class="btn btn-lg btn-category">Featured</button>
+            <button class="btn btn-lg btn-category">Events</button>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-container mt-5">
+        <div id="stampCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-around">
+                        <img src="https://th.bing.com/th/id/OIP.3wp_BEUXJNpJNDzPLlT3FwAAAA?rs=1&pid=ImgDetMain" class="d-block" alt="Stamp 1">
+                        <img src="https://s-media-cache-ak0.pinimg.com/236x/76/0b/5f/760b5f5217dbed1c7f08f0714e6bee22.jpg" class="d-block" alt="Stamp 2">
+                        <img src="https://c8.alamy.com/comp/J4YT8R/vintage-stamp-of-swami-vivekananda-india-asia-J4YT8R.jpg" class="d-block" alt="Stamp 3">
+                        <img src="https://c8.alamy.com/comp/D4F7GT/indian-postage-stamp-D4F7GT.jpg" class="d-block" alt="Stamp 4">
+                        <img src="https://c8.alamy.com/comp/J0ETNX/mahatma-gandhi-postage-stamps-india-asia-J0ETNX.jpg" class="d-block" alt="Stamp 5">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-around">
+                        <img src="https://th.bing.com/th/id/OIP.eAZds_UL-PgJWJmMIqST7AAAAA?w=286&h=250&rs=1&pid=ImgDetMain" class="d-block" alt="Stamp 6">
+                        <img src="https://farm3.staticflickr.com/2728/4381267576_24637bcd04_z.jpg?zz=1" class="d-block" alt="Stamp 7">
+                        <img src="https://th.bing.com/th/id/OIP.pkami6LUnJx4LrGubdcdKgAAAA?w=425&h=472&rs=1&pid=ImgDetMain" class="d-block" alt="Stamp 8">
+                        <img src="https://th.bing.com/th/id/OIP.0xFJLlYdGT1P90SbFeqckgHaIM?rs=1&pid=ImgDetMain" class="d-block" alt="Stamp 9">
+                        <img src="https://th.bing.com/th/id/OIP.KPj3aFn6glnnpS9dWRVKowHaHa?w=600&h=600&rs=1&pid=ImgDetMain" class="d-block" alt="Stamp 10">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#stampCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#stampCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #5a3e36;
+}
+
+header .nav-link {
+    color: #5a3e36;
+}
+
+.banner-container {
+    background-color: #f7f1e5;
+    padding: 20px;
+}
+
+.banner {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.banner-img {
+    width: 250px;
+    height: auto;
+}
+
+.banner-text h2 {
+    font-size: 28px;
+    color: #5a3e36;
+}
+
+.banner-text p {
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.banner .btn {
+    margin-top: 20px;
+    background-color: #5a3e36;
+    border: none;
+}
+
+.categories {
+    background-color: #fdfdfd;
+    padding: 20px 0;
+}
+
+.btn-category {
+    background-color: #5a3e36;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+.carousel-container {
+    background-color: #f7f1e5;
+    padding: 20px 0;
+}
+
+.carousel-inner img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #5a3e36;
+}
+
+.btn-category:hover {
+
+  background-color: inherit; /* Keep the original background color */
+  color: white; /* Keep the original text color */
+}
+
+
+</style>
