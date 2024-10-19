@@ -1,7 +1,6 @@
 const mongoose= require("mongoose");
 const Schema= mongoose.Schema;
 
-
 const stampSchema= new  Schema({
     stamp_name:{
         type:String,
@@ -10,6 +9,10 @@ const stampSchema= new  Schema({
     stamp_image:{
         type:String,
         required:true
+    },
+    stamp_description:{
+        type:String,
+        required:true,
     },
     comments:[
         {

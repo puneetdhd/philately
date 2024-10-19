@@ -1,6 +1,5 @@
 const express= require ("express");
 const app= express();
-const User=require("./models/user");
 const mongoose= require("mongoose");
 const path=require("path");
 const ejsMate = require("ejs-mate");
@@ -9,6 +8,15 @@ const wrapAsync= require("./utils/wrapAsync");
 const ExpressError= require("./utils/ExpressError");
 app.use(express.static('public'));
 
+
+// const profileRouter=require("./routes/profile");
+// const
+
+//importing all models
+const Stamp=require("./models/stampmodel.js");
+const Posts=require("./models/posts.js");
+const User=require("./models/user.js");
+const Comment=require("./models/comment.js");
 
 
 const { stackTraceLimit } = require("./utils/ExpressError.js");
@@ -20,7 +28,7 @@ const methodOverride=require("method-override");
 const session=require("express-session");
 const flash= require("connect-flash");
 const passport=require("passport");
-const LocalStratergy=require("passport-local");
+const LocalStratergy = require("passport-local"); // Should be LocalStrategy
 
 
 
@@ -86,8 +94,7 @@ app.use((req,res,next)=>{
 });
 
 
-
-
+//Routes
 
 app.get("/",async(req,res)=>{
     res.render("pages/home.ejs");
@@ -106,17 +113,61 @@ app.get("/explore",async(req,res)=>{
     res.render("pages/explore.ejs");
 });
 
-app.get("/profile",async(req,res)=>{
-    res.render("pages/profile.ejs");
+app.get("/explore/profile/:id",async(req,res)=>{
+    res.render("pages/profile.ejs",{User});
 });
 
-app.get("/stampcalendar",async(req,res)=>{
+app.get("/explore/stampcalendar",async(req,res)=>{
     res.render("pages/stampcalendar");
 })
 
-app.get("/rarestamp",async(req,res)=>{
+app.get("/explore/rarestamp",async(req,res)=>{
     res.render("pages/rarestamp");
 });
+
+//shows stamps
+app.get("/explore/:id",wrapAsync(async (req,res)=> {
+    let {id}=req.params;
+    const stamp=await Stamp.findById(id).populate("comments");
+    res.render("pages/showstamps.ejs", {Stamp});
+
+}))
+
+
+app.get("/explore/profile/:id/addposts",async(req,res)=>{
+    res.render("pages/addposts");
+})
+
+
+//validation of comments
+function validateComment(req, res, next) {
+    let { error } = commentSchema.validate(req.body);
+    if (error) {
+        let errMsg = error.details.map((el) => el.message).join(",");
+        throw new ExpressError(400, errMsg);
+    } else {
+        next();
+    }
+}
+
+//posting of comments
+app.post("/",validateComment,wrapAsync(async(req,res)=>{
+    console.log(req.params.id);
+
+    let stamp= await Stamp.findById(req.params.id);
+    let newComment=new Comment(req.body.comment);
+
+    Stamp.Comment.push(newComment);
+    await newReview.save();
+    await stamp.save();
+    res.redirect(`/explore/${Stamp._id}`);
+}));
+
+
+
+
+
+
 
 
 app.get("/testschema",async(req,res)=>{
@@ -170,7 +221,6 @@ app.post(
             req.flash("Welcome back to Philately!You are logged in!");
             res.redirect("/explore");
 })
-
 
 app.get("/logout",(req,res)=>{
     req.logOut((err)=>{
