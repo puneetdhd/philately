@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: space-between;
+    /* align-items:center; */
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Typography */
+.welcome {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.log-in-content {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input a {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #6c757d;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.input a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.btn button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5e352e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: #4d2a25;
+}
+
+/* Continue with section */
+.continue-with-section {
+    margin: 20px 0;
+}
+
+.divider {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.options a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.options img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Sign-up link */
+.sign-up-link {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+.sign-up-link a {
+    color: #5e352e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+/* footer */
+footer>img {
+    position: fixed;
+    bottom: 0px;
+    /* object-fit: cover; */
+    width: 100vw;
+}

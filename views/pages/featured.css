@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Add this for consistent sizing */
+}
+
+/* Basic reset */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+
+header {
+    height: 70vh;
+    background-image: url(/images/Overlay-1.png);
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    padding: 10%;
+    position: relative;
+    background-size: cover; /* Ensure the image scales */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* More controlled transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+header > h1, 
+header > h3 {
+    color: #FFF;
+    position: relative;
+    z-index: 3;
+    text-align: left;
+}
+header > h3{
+    margin-top: 5px;
+    font-weight: 40;
+}
+/* Make the heading responsive */
+header > h1 {
+    font-size: 4vw; /* Scales with viewport width */
+    line-height: 1.2;
+}
+
+header > h3 {
+    font-size: 2vw;
+}
+
+/* Responsive section headings */
+h2, section > h3 {
+    text-align: center;
+    margin: 2% 5%;
+    font-size: 2vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+/* Flexbox container for cards */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 2%;
+}
+
+/* Card styles */
+.card1 {
+    padding: 2%;
+    margin: 1%;
+    width: 20%; /* Width based on percentage for responsiveness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+}
+
+.image_ar img {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto;
+}
+
+.btn {
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #645C5B;
+    padding: 10px;
+    color: white;
+    margin: 10px auto; /* Center button */
+    display: block;
+    cursor: pointer;
+}
+
+.first-line {
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+
+.second-line {
+    font-size: 1vw;
+    color: #999393;
+}
+
+/* Grid container for recent releases */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: auto;
+    gap: 1.2em;
+    padding: 5%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.pic img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+}
+
+.sec, .third {
+    color: #645C5B;
+    margin-top: 2%;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 1200px) {
+    .card1 {
+        width: 45%; /* Wider cards for medium screens */
+    }
+    header > h1 {
+        font-size: 5vw; /* Adjust header size */
+    }
+    header > h3 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .card1 {
+        width: 90%; /* Full-width for small screens */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        padding: 5%;
+    }
+
+    header > h1 {
+        font-size: 6vw;
+    }
+    header > h3 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    header > h1 {
+        font-size: 8vw; /* Further reduce heading size */
+    }
+    header > h3 {
+        font-size: 5vw;
+    }
+
+    h2, section > h3 {
+        font-size: 5vw;
+    }
+
+    .container {
+        flex-direction: column; /* Stack items for very small screens */
+        padding: 5%;
+    }
+}
