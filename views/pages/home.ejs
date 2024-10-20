@@ -1,171 +1,150 @@
 <% layout("/layouts/boilerplate") %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhilatelyIndia: A Collector's Paradise</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #fdfdfd;
-            color: #333;
-        }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .join-btn {
-            padding: 10px 20px;
-            background-color: #5a2b21;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .join-btn:hover {
-            background-color: #4e251b;
-        }
-
-        .container {
-            text-align: center;
-            padding: 50px;
-        }
-
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        .explore {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 50px;
-        }
-
-        .explore-content {
-            max-width: 40%;
-            text-align: left;
-        }
-
-        .explore-content h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .explore-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .explore-content li {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .explore-content li::before {
-            content: '✔';
-            margin-right: 10px;
-            color: #5a2b21;
-        }
-
-        .explore-img img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .explore-btn {
-            display: block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: #5a2b21;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .explore-btn:hover {
-            background-color: #4e251b;
-        }
-    </style>
-</head>
 <body>
-
-    <!-- <header>
-        <h1>PhilatelyIndia: A Collector's Paradise</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Explore</a>
-            <a href="#">Community</a>
-            <a href="#">Profile</a>
-            <a href="#">Trade</a>
-            <button class="join-btn">Join Our Community</button>
-        </nav>
-    </header> -->
-
-    <div class="container">
-        <h2>Welcome to PhilatelyIndia - Where Every Stamp Tells a Story!</h2>
-        <p>Dive into the vibrant world of stamp collecting with PhilatelyIndia. Connect with fellow enthusiasts, explore rare collections, and trade stamps from all corners of India. Join us today and fuel your passion for philately!</p>
-    </div>
-
-    <div class="explore">
-        <div class="explore-content">
-            <h3>Explore the World of Philately</h3>
-            <ul>
-                <li>Discover Rare Stamps</li>
-                <li>Connect with Collectors</li>
-                <li>Trade Seamlessly</li>
-            </ul>
-            <a href="/signup" class="explore-btn">Join the Community</a>
-        </div>
-        <div class="explore-img">
-            <img src="https://footlooseforever.com/wp-content/uploads/2017/01/dscn3148.jpg?w=1200&h=800&crop=1" alt="Philately" class="photo">
-        </div>
-    </div>
-
+    <nav>
+        <!-- Add navbar if needed -->
+    </nav>
+    <header class="hero-section">
+        <h1>Welcome to PhilatelyIndia - Where Every Stamp Tells a Story!</h1>
+    </header>
+    <main>
+        <article class="intro-text">
+            <p>Dive into the vibrant world of stamp collecting with PhilatelyIndia. Connect with fellow enthusiasts, explore rare collections, and trade stamps from all corners of India. Join us today and fuel your passion for philately!</p>
+        </article>
+        <section class="content-section">
+            <div class="list">
+                <h2>Explore the World of Philately</h2>
+                <ul>
+                    <li><i class="check-icon">✔</i> Discover Rare Stamps</li>
+                    <li><i class="check-icon">✔</i> Connect with Collectors</li>
+                    <li><i class="check-icon">✔</i> Trade Seamlessly</li>
+                </ul>
+                <button>Join the Community</button>
+            </div>
+            <div class="image">
+                <img src="/images/image.png" alt="Philately World">
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
 
 <style>
-    .photo{
-    width: 449px;
-    height: 378px;
-    flex-shrink: 0;}
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header - Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5e352e;
+    margin-bottom: 20px;
+}
+
+/* Intro Text */
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Main Content Section */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.list {
+    max-width: 400px;
+    text-align: left;
+}
+
+.list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #5e352e;
+}
+
+.list ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.list ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.list ul li i {
+    margin-right: 10px;
+    color: #5e352e;
+    font-size: 20px;
+}
+
+.list button {
+    background-color: #5e352e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.list button:hover {
+    background-color: #4d2a25;
+}
+
+/* Image Section */
+.image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .list {
+        text-align: center;
+    }
+}
 </style>

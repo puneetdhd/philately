@@ -117,6 +117,11 @@ app.get("/explore/profile/:id",async(req,res)=>{
     res.render("pages/profile.ejs",{User});
 });
 
+//new post route
+app.get("/explore/profile/:id/newpost",async(req,res)=>{
+    res.render("addposts.ejs");
+});
+
 app.get("/explore/stampcalendar",async(req,res)=>{
     res.render("pages/stampcalendar");
 })
@@ -130,13 +135,9 @@ app.get("/explore/:id",wrapAsync(async (req,res)=> {
     let {id}=req.params;
     const stamp=await Stamp.findById(id).populate("comments");
     res.render("pages/showstamps.ejs", {Stamp});
-
 }))
 
 
-app.get("/explore/profile/:id/addposts",async(req,res)=>{
-    res.render("pages/addposts");
-})
 
 
 //validation of comments
@@ -166,10 +167,6 @@ app.post("/",validateComment,wrapAsync(async(req,res)=>{
 
 
 
-
-
-
-
 app.get("/testschema",async(req,res)=>{
     let sampleSchema=new Profile({
         name:"Rahul",
@@ -177,7 +174,6 @@ app.get("/testschema",async(req,res)=>{
         
     })
 });
-
 
 
 app.get("/signup",(req,res)=>{
