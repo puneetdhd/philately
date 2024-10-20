@@ -43,12 +43,12 @@
     border: none;
     cursor: pointer;
 }
-.dots{
+#dots{
     width: 90%;
     display: flex;
     justify-content: space-around;
 }
-.dots>div{
+#dots>div{
     display: inline-block;
     background-color: brown;
     height: 0.675em;
@@ -65,17 +65,161 @@
     justify-content: space-around;
 }
 #btn>button{
-    width: 10vw;
+    width: 10.375em;
     height: auto;
     font-size: 100%;
     text-wrap: nowrap;
-    padding: 1vw;
+    padding: 0.475em;
     text-align: center;
     background: brown;
     color: aliceblue;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 button:hover{
     background-color: rgb(110, 28, 28);
 }
+.swiper-wrapper {
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color:#BBB079; */
+    padding: 45px;
+  }
+  .mySwiper{
+    background-color:#BBB079;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .swiper-button-next {
+    right: -15px;
+  }
+  
+  .swiper-button-prev {
+    left: -15px;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide>div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 295px;
+    width: 24vw;
+    height: 470px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px 2px rgba(102, 102, 103, 0.75);
+    max-width: 320px;
+    background-color:white;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .swiper-slide img {
+    height: 90%;
+    object-fit: cover;
+    margin: auto;
+  }
+  
+  .swiper-slide h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 10px;
+    background: brown;
+    color: #e2e8f0;
+  }
+  
+  .swiper-slide a {
+    background-color:white;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 8%;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  
+  .swiper-slide a:hover {
+    background-color:white;
+  }
+  
+  @media (max-width: 640px) {
+    .swiper-button-next {
+      right: 10px;
+    }
+  
+    .swiper-button-prev {
+      left: 10px;
+    }
+  
+    .swiper-slider>div {
+      zoom: 0.8;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .swiper-slide>div {
+      width: 95%;
+    }
+  }
+  
+  @media (min-width: 770px) and (max-width: 920px) {
+    .swiper-button-next {
+      right: 10px;
+    }
+  
+    .swiper-button-prev {
+      left: 10px;
+    }
+  
+    .swiper-slide>div {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1090px) {
+    .swiper-button-next {
+      right: 0px;
+    }
+  
+    .swiper-button-prev {
+      left: 0px;
+    }
+  }
