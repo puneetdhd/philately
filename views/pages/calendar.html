@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullCalendar Example</title>
 
-    <!-- FullCalendar CSS (Day Grid and Core) -->
+    <!-- FullCalendar CSS -->
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
 
     <style>
-        /* Basic styling for the calendar container */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #eae7e7;
         }
 
         #calendar-container {
@@ -23,43 +22,112 @@
             margin: 50px auto;
             padding: 15px;
             background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(226, 22, 22, 0.1);
             border-radius: 8px;
         }
+        .hero{
+          background-image: url("https://drive.google.com/thumbnail?id=1XjITbd7vgykm3fGLOaL8dQk536gxzvz2");
+          background-size: cover;
+          /* border: 2px solid;
+          margin-top: 120px; */
+         height: 80vh;
+         /* background-position: center; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 10vh;
+        }
+        .hero-text{
+          color: white;
+          font-weight: bolder;
+         
+        }
+        .fc-event {
+            background-color: #d04c1c !important; 
+            color: white !important; /* Make event text white */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Round corners */
+            padding: 4px 8px; /* Add some padding */
+            text-align: center;
+        }
+         /* Highlight event dates on the calendar */
+         .fc-daygrid-day[data-date="2024-01-18"],
+        .fc-daygrid-day[data-date="2024-10-07"],
+        .fc-daygrid-day[data-date="2024-10-10"],
+        .fc-daygrid-day[data-date="2024-10-11"],
+        .fc-daygrid-day[data-date="2024-01-24"],
+        .fc-daygrid-day[data-date="2024-01-25"],
+        .fc-daygrid-day[data-date="2024-01-31"],
+        .fc-daygrid-day[data-date="2024-02-08"],
+        .fc-daygrid-day[data-date="2024-02-14"] {
+            background-color: rgb(89, 28, 18); 
+            /* text-align: center; */
+        }
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
 
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            #calendar-container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            #calendar-container {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 
 <body>
+  <div class="hero">
+    <div class="hero-text"><h1>Welcome To Stamp Calender</h1>
+      <p>The untold history of India</p></div>
+    
+  </div>
 
     <div id="calendar-container">
         <div id="calendar"></div>
     </div>
 
-    <!-- FullCalendar JS (Core and Day Grid) -->
+    <!-- FullCalendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
     <script>
-        // Ensure the DOM is fully loaded before initializing FullCalendar
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',  // Start with a month view
-                initialDate: '2024-10-01',   // Optional: Start date for the calendar
+                initialView: 'dayGridMonth',
+                initialDate: '2024-10-01',
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
                     right: 'dayGridMonth'
                 },
-                events: [  // Add sample events
+                events: [
                     { title: 'Event 1', start: '2024-10-03' },
-                    { title: 'Event 2', start: '2024-10-07' },
+                    { title: 'Rare stamp', start: '2024-10-07' },
+                    {title:'Shri ram janmbhoomi temple',start:'2024-01-18'},  {title:'100th birthday of karpoori tahkur',start:'2024-01-24'},  {title:'Bharat the mother of democracy',start:'2024-01-25'},  {title:'Bombay memorial',start:'2024-01-31'},
                     { title: 'Event 3', start: '2024-10-10', end: '2024-10-12' }
                 ]
             });
 
-            // Render the calendar
             calendar.render();
         });
     </script>

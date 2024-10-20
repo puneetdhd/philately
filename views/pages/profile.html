@@ -4,150 +4,182 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PhilatelyIndia: A Collector's Paradise</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color:white;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5a2b2b;
+    color: white;
+  }
+  
+  .navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .join-btn {
+    background-color: #4d1c1c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .profile-section {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
     
-    .profile-section {
-      color: black;
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      align-items: center;
-    }
-    .profile-section img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-    }
-    .profile-section .profile-info {
-      text-align: center;
-    }
-    .profile-section .profile-info h2 {
-      margin: 10px 0;
-      color: black;
-    }
-    .buttons {
-      display: flex;
-      gap: 10px;
-    }
-    .button {
-      background-color: #3E2723;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      color: aliceblue;
-    }
-    .button:hover {
-      background-color: #4E342E;
-    }
-    .button img {
-      margin-right: 10px;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px;
-    }
-    .tabs button {
-      color: white;
-      background-color: #3E2723;
-      padding: 10px 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .tabs button:hover {
-      background-color: #4E342E;
-    }
-    .content-section {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      gap: 20px;
-    }
-    .content-section img {
-      border-radius: 10px;
-    }
-    .stamp-gallery, .post {
-      width: 48%;
-    }
-    .post {
-      background-color: white;
-      color: #004D40;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .post h3 {
-      margin-bottom: 20px;
-    }
-    .post img {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .post p {
-      margin-bottom: 10px;
-    }
+  }
+  
+  .cover-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    position: absolute;
+    top: 220px;
+    transform: translateX(10%);
+
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    height: 100px;
+    border: 3px solid white;
+  }
+  .social-links {
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .socialtext{
+    margin-left:10px;
+  }
+  .social-links a img {
+    width: 30px;
+    margin: 0 10px;
+  }
+  .links{
+    margin-right: 20px;
+    
+  }
+  
+  .posts-section {
+margin: 20px;
+   display: flex;
+   border: 2px solid rgb(238, 214, 214);
+   box-shadow: 2px 2px 8px rgba(74, 6, 6, 0.7);
+   border-radius: 8px;
+   justify-content: space-between;
+   align-items: center;
+   gap:30px;
+  }
+  .post-text,.post-image{
+    flex: 1;
+    padding: 10px;
+  }
+  .post-text > h2{
+    color: #5a2b2b;
+  }
+  .post-image{
+    width: 10;
+  }
+  
+  .post h3 {
+    margin-top: 0;
+  }
+  
+  .author-pic {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .post-text {
+    margin: 30px;
+  }
+  
+  .post-image {
+    /* margin: auto; */
+    width: 50%;
+    border-radius: 15px;
+    object-fit: contain;
+     display: flex; 
+     justify-content: center;
+    align-items: center; 
+  }
+  
   </style>
 </head>
 <body>
-  <!-- User Profile Section -->
+  <!-- Header -->
+  <header class="header">
+    <h1>PhilatelyIndia: A Collector's Paradise</h1>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Explore</a>
+      <a href="#">Community</a>
+      <a href="#">Profile</a>
+      <a href="#">Trade</a>
+      <button class="join-btn">Join Our Community</button>
+    </nav>
+  </header>
+
+  <!-- Profile Section -->
   <section class="profile-section">
-    <div class="profile-container">
-        <div class="profile-info">
-            <img src="/images/profile-photo.jpg" alt="Pradip Kumar">
-            <h2>Pradip Kumar</h2>
-            <p>564 collections</p>
-          </div>
-          <div class="buttons">
-            <div class="button">Follow</div>
-            <div class="button">Message</div>
-          </div>
+    <div class="cover-photo">
+      <img src="https://drive.google.com/thumbnail?id=1rEsQirabpD0jdG0jsMuctbPVevWXsjOD" alt="Cover Image">
+    </div>
+    <div class="profile-info">
+      <img class="profile-pic" src="https://drive.google.com/thumbnail?id=1EUZg6t5COaZvd9L_Qf1D59InnXQVVAvI">
     </div>
   </section>
 
-  <!-- Tabs Section -->
-  <section class="tabs">
-    <button>Posts</button>
-    <button>My Collection</button>
-    <button>Following</button>
-    <button>Wishlist</button>
-    <button>Trade History</button>
-  </section>
-
-  <!-- Content Section -->
-  <div class="content-section">
-    <!-- Stamp Gallery -->
-    <section class="stamp-gallery">
-      <h3>My Collection</h3>
-      <div class="grid">
-        <img src="placeholder.svg" alt="Stamp 1">
-        <img src="placeholder.svg" alt="Stamp 2">
-        <img src="placeholder.svg" alt="Stamp 3">
-        <img src="placeholder.svg" alt="Stamp 4">
-        <img src="placeholder.svg" alt="Stamp 5">
-        <img src="placeholder.svg" alt="Stamp 6">
-      </div>
-    </section>
-
-    <!-- Latest Post -->
-    <section class="post">
-      <h3>Shri Ram Janmbhoomi Temple India Souvenir Sheet</h3>
-      <img src="placeholder.svg" alt="Souvenir Sheet">
-      <p>The Shri Ram Janmbhoomi Temple India Souvenir Sheet is a remarkable philatelic item commemorating the construction of the Ram Mandir in Ayodhya. This beautifully designed sheet features intricate artwork depicting the temple and holds significant cultural and historical value for collectors.</p>
-      <a href="#" style="color: #3E2723;">Read more from @stampexpert</a>
-    </section>
+  <!-- Social Links -->
+  <div class="social-links">
+    <div class="socialtext">
+        <h2>Pradip Kumar</h2>
+        <p>564 collections</p>
+    </div>
+    <div class="links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+  
+    </div>
   </div>
+
+  <!-- Posts Section -->
+  <section class="posts-section">
+    <div class="post-text">
+        <h2>Shri Ram Janmbhoomi Temple India Souvenir Sheet</h2>
+        <img class="author-pic" src="https://drive.google.com/thumbnail?id=1EUZg6t5COaZvd9L_Qf1D59InnXQVVAvI" alt="Author Picture">
+        <p>Pradip Kumar</p>
+        
+        <p>
+            The Shri Ram Janmbhoomi Temple holds immense significance for millions of Hindus worldwide as a revered site believed to be the birthplace of Lord Rama. 
+        The history of this sacred place is as diverse and profound as India’s cultural tapestry, marked by centuries of devotion, controversy, and ultimately, a historic resolution.
+        </p>
+    </div>
+    <div class="post-image">
+      <img class="post-image" height="200px" src="https://drive.google.com/thumbnail?id=1CHZ52XybybPf6Naa9SR-ONhBRW_u3i9Z" alt="Souvenir Sheet Image">
+    </div>
+  </section>
 
 </body>
 </html>
