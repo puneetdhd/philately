@@ -32,7 +32,7 @@ const LocalStratergy = require("passport-local"); // Should be LocalStrategy
 
 
 
-const MONGO_URL= 'mongodb://127.0.0.1:27017/prototype';
+const MONGO_URL= 'mongodb+srv://Puneet:init01234@philately.fuivl.mongodb.net/prototype';
 
 async function main(){
     await mongoose.connect(MONGO_URL);
