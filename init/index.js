@@ -5,7 +5,8 @@ const initData = require("./data.js");
 
 const Stamp = require("../models/stampmodel.js");
 
-const MONGO_URL= 'mongodb://127.0.0.1:27017/prototype';
+const MONGO_URL= 'mongodb+srv://Puneet:init01234@philately.fuivl.mongodb.net/prototype';
+
 
 
 async function main(){
@@ -23,7 +24,7 @@ main()
 
 
 const initDB= async ()=>{
-    await Stamp.deleteMany({});
+    // await Stamp.deleteMany({});
     await Stamp.insertMany(initData.data);
     console.log("data was initialized");
 };

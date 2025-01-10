@@ -1,31 +1,33 @@
-const mongoose= require("mongoose");
-const Schema= mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const stampSchema= new  Schema({
-    stamp_name:{
-        type:String,
-        required:true,
+const stampSchema = new Schema({
+    stamp_name: {
+        type: String,
+        required: true,
     },
-    stamp_image:{
-        type:String,
-        required:true
+    stamp_image: {
+        type: String,
+        required: true
     },
-    stamp_description:{
-        type:String,
-        required:true,
+    stamp_description: {
+        type: String,
+        required: true,
     },
-    comments:[
+    comments: [
         {
-            type:Schema.Types.ObjectId,
-            ref:"Comment"
+            type: Schema.Types.ObjectId,
+            ref: "Comment"
         }
     ],
-    cereatedAt:{
-        type:Date,
-        default:Date.now()
-
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
-})
+});
 
-const Stamp=mongoose.stampSchema;
-module.exports=Stamp;
+// Correctly create the Stamp model
+const Stamp = mongoose.model("Stamp", stampSchema);
+
+module.exports = Stamp;
+
